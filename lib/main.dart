@@ -1,6 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:snaptify/page/home_page.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:snaptify/blocs/snaptify_bloc/snaptify_bloc.dart';
+import 'package:snaptify/providers/api_provider.dart';
+import 'package:snaptify/repositories/main_repository.dart';
+import 'package:snaptify/router/router_name.dart';
+import 'package:snaptify/router/router_generator.dart';
+import 'package:qlevar_router/qlevar_router.dart';
+
 
 void main() {
   runApp(const MyApp());
@@ -12,15 +19,35 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-        textTheme: GoogleFonts.poppinsTextTheme(
-          Theme.of(context).textTheme, 
+    return MultiRepositoryProvider(
+      providers: [
+        RepositoryProvider<MainRepository>(
+          create: (context) => MainRepository(),
+          lazy: true,
         ),
+        RepositoryProvider<ApiProvider>(
+          create: (context) => ApiProvider(),
+          lazy: true,
+        ),
+      ],
+      child: MultiBlocProvider  (
+        providers: [
+          BlocProvider<SnaptifyBloc>(
+            create: (context)  => SnaptifyBloc(),
+          ),
+        ],
+        child: MaterialApp.router(
+          title: 'Flutter Demo',
+          theme: ThemeData(
+            primarySwatch: Colors.blue,
+            textTheme: GoogleFonts.poppinsTextTheme(
+              Theme.of(context).textTheme, 
+            ),
+          ),
+          routeInformationParser: const QRouteInformationParser(),
+          routerDelegate: QRouterDelegate(RouteGenerator.routes)
+        )
       ),
-      home: HomePage(),
     );
   }
 }

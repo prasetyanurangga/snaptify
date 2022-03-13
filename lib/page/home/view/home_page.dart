@@ -1,5 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:snaptify/layout/layout.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:snaptify/blocs/snaptify_bloc/snaptify_bloc.dart';
+import 'package:snaptify/blocs/snaptify_bloc/snaptify_event.dart';
+import 'package:snaptify/router/router_name.dart';
+import 'package:qlevar_router/qlevar_router.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -9,6 +14,20 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+
+  TextEditingController _editingController = TextEditingController();
+
+  void onSearch(){
+    if(_editingController.text != "") {
+      BlocProvider.of<SnaptifyBloc>(context).add(
+        GetSnaptifyByKeyword(
+          keyword: _editingController.text,
+        )
+      );
+
+      QR.toName(RoutesName.RESULT_PAGE);
+    }
+  }
 
   Widget _buildMain(){
     return Scaffold(
@@ -46,6 +65,7 @@ class _HomePageState extends State<HomePage> {
                   ),
                   SizedBox(height: 16),
                   TextFormField(
+                    controller: _editingController,
                     textAlign: TextAlign.center,
                     decoration: InputDecoration(
                       hintText: "Type URL",
@@ -85,7 +105,9 @@ class _HomePageState extends State<HomePage> {
                       ),
                       backgroundColor: Color(0xFF333333)
                     ),
-                    onPressed: () {},
+                    onPressed: () {
+                      onSearch();
+                    },
                     child: Text(
                       "Search",
                       style: Theme.of(context).textTheme.bodyText1?.copyWith(
@@ -136,6 +158,7 @@ class _HomePageState extends State<HomePage> {
                   ),
                   SizedBox(height: 16),
                   TextFormField(
+                    controller: _editingController,
                     textAlign: TextAlign.center,
                     decoration: InputDecoration(
                       hintText: "Type URL",
@@ -175,7 +198,9 @@ class _HomePageState extends State<HomePage> {
                       ),
                       backgroundColor: Color(0xFF333333)
                     ),
-                    onPressed: () {},
+                    onPressed: () {
+                      onSearch();
+                    },
                     child: Text(
                       "Search",
                       style: Theme.of(context).textTheme.bodyText1?.copyWith(
@@ -227,6 +252,7 @@ class _HomePageState extends State<HomePage> {
                   ),
                   SizedBox(height: 16),
                   TextFormField(
+                    controller: _editingController,
                     textAlign: TextAlign.center,
                     decoration: InputDecoration(
                       hintText: "Type URL",
@@ -266,7 +292,9 @@ class _HomePageState extends State<HomePage> {
                       ),
                       backgroundColor: Color(0xFF333333)
                     ),
-                    onPressed: () {},
+                    onPressed: () {
+                      onSearch();
+                    },
                     child: Text(
                       "Search",
                       style: Theme.of(context).textTheme.bodyText1?.copyWith(
