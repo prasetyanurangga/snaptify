@@ -44,7 +44,7 @@ class _ResultPageState extends State<ResultPage> {
                     itemCount: data.length,shrinkWrap: true,
                     itemBuilder: (BuildContext ctx, index) {
                       return Container(
-                        margin: EdgeInsets.symmetric(horizontal: 16)
+                        margin: EdgeInsets.symmetric(vertical: 16)
                         child: ItemTrack(
                           snaptifyData: data[index]
                         )
@@ -84,7 +84,7 @@ class _ResultPageState extends State<ResultPage> {
                     itemCount: data.length,shrinkWrap: true,
                     itemBuilder: (BuildContext ctx, index) {
                       return Container(
-                        margin: EdgeInsets.symmetric(horizontal: 16)
+                        margin: EdgeInsets.symmetric(vertical: 16)
                         child: ItemTrack(
                           snaptifyData: data[index]
                         )
