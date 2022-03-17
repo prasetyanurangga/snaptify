@@ -64144,7 +64144,7 @@ A.aaj.prototype={
 $0(){this.a.C8(0)},
 $S:0}
 A.kC.prototype={
-D9(){var s=A.aw1("http://107.172.253.101:2001",A.aO(["Content-Type","application/json"],t.N,t.z)),r=new A.Uw($,new A.F4(A.b([],t.lC),new A.vU(),new A.vU(),new A.vU()),$,new A.Um(),!1)
+D9(){var s=A.aw1("https://snaptify-api.herokuapp.com",A.aO(["Content-Type","application/json"],t.N,t.z)),r=new A.Uw($,new A.F4(A.b([],t.lC),new A.vU(),new A.vU(),new A.vU()),$,new A.Um(),!1)
 r.Ly$=s
 r.Lz$=new A.SG(A.b([],t.Hh))
 return r},
