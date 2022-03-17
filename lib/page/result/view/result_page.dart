@@ -43,8 +43,11 @@ class _ResultPageState extends State<ResultPage> {
                   return ListView.builder(
                     itemCount: data.length,shrinkWrap: true,
                     itemBuilder: (BuildContext ctx, index) {
-                      return ItemTrack(
-                        snaptifyData: data[index]
+                      return Container(
+                        margin: EdgeInsets.symmetric(horizontal: 16)
+                        child: ItemTrack(
+                          snaptifyData: data[index]
+                        )
                       );
                     });
                 } else if(state is SnaptifyFailure) {
@@ -80,8 +83,11 @@ class _ResultPageState extends State<ResultPage> {
                   return ListView.builder(
                     itemCount: data.length,shrinkWrap: true,
                     itemBuilder: (BuildContext ctx, index) {
-                      return ItemTrack(
-                        snaptifyData: data[index]
+                      return Container(
+                        margin: EdgeInsets.symmetric(horizontal: 16)
+                        child: ItemTrack(
+                          snaptifyData: data[index]
+                        )
                       );
                     });
                 } else if(state is SnaptifyFailure) {
