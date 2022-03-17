@@ -1,3 +1,3 @@
 class Strings{
-  static const String base_url = "http://107.172.253.101:2001";
+  static const String base_url = "https://snaptify-api.herokuapp.com";
 }
