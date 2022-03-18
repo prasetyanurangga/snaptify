@@ -46,7 +46,7 @@ class SnaptifyBloc extends Bloc<SnaptifyEvent, SnaptifyState> {
           emit(const SnaptifyFailure(error: ""));
         }
         if (response.status == Status.Success) {
-          emit(SnaptifySuccess(data: finalResponse as List<Data>));
+          emit(SnaptifySuccess(data: finalResponse.data as List<Data>));
         } else {
           emit(SnaptifyFailure(error: response.message ??  "Error"));
         }
