@@ -7,6 +7,7 @@ import 'package:qlevar_router/qlevar_router.dart';
 
 
 class RouteGenerator {
+
   
   static final routes = <QRoute>[
     QRoute(

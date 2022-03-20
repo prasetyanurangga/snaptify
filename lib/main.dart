@@ -6,6 +6,7 @@ import 'package:snaptify/providers/api_provider.dart';
 import 'package:snaptify/repositories/main_repository.dart';
 import 'package:snaptify/router/router_name.dart';
 import 'package:snaptify/router/router_generator.dart';
+import 'package:snaptify/page/not_found/not_found.dart';
 import 'package:qlevar_router/qlevar_router.dart';
 
 
@@ -19,6 +20,10 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+
+
+    QR.settings.notFoundPage = QRoute(path: '/404', builder: ()=> NotFoundPage());
+
     return MultiRepositoryProvider(
       providers: [
         RepositoryProvider<MainRepository>(
@@ -37,7 +42,7 @@ class MyApp extends StatelessWidget {
           ),
         ],
         child: MaterialApp.router(
-          title: 'Flutter Demo',
+          title: 'Snaptify',
           theme: ThemeData(
             primarySwatch: Colors.blue,
             textTheme: GoogleFonts.poppinsTextTheme(

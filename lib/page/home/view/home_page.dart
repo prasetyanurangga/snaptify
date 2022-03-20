@@ -15,13 +15,34 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
 
-  TextEditingController _editingController = TextEditingController();
+  late TextEditingController _editingController;
+  late AssetImage imageSmall;
+  late AssetImage imageMedium;
+  late AssetImage imageLarge;
+
+  @override
+  void initState() {
+    super.initState();
+    _editingController = TextEditingController();
+    imageSmall = AssetImage("assets/images/background_small.png");
+    imageMedium = AssetImage("assets/images/background_medium.png");
+    imageLarge = AssetImage("assets/images/background_large.png");
+
+  }
+
+  @override
+  void didChangeDependencies() {
+    precacheImage(imageSmall, context);
+    precacheImage(imageMedium, context);
+    precacheImage(imageLarge, context);
+    super.didChangeDependencies();
+  }
 
   void onSearch(){
     if(_editingController.text != "") {
       BlocProvider.of<SnaptifyBloc>(context).add(
-        GetSnaptifyByImageUrl(
-          url: _editingController.text,
+        GetSnaptifyByKeyword(
+          keyword: _editingController.text,
         )
       );
 
@@ -36,7 +57,7 @@ class _HomePageState extends State<HomePage> {
           padding: EdgeInsets.all(24),
           decoration: BoxDecoration(
             image: DecorationImage(
-              image: AssetImage("assets/images/background_small.png"),
+              image: imageSmall,
               fit: BoxFit.cover,
             ),
           ),
@@ -55,7 +76,7 @@ class _HomePageState extends State<HomePage> {
                   ),
                   SizedBox(height: 16),
                   Text(
-                    "Sort your Spotify music by any mood you like and save them as playlists. ",
+                    "Sort your Spotify music by any image you like ",
                     textAlign: TextAlign.center,
                     style: Theme.of(context).textTheme.bodyText1?.copyWith(
                       fontSize: 16.0, 
@@ -126,7 +147,7 @@ class _HomePageState extends State<HomePage> {
           padding: EdgeInsets.all(24),
           decoration: BoxDecoration(
             image: DecorationImage(
-              image: AssetImage("assets/images/background_medium.png"),
+              image: imageMedium,
               fit: BoxFit.cover,
             ),
           ),
@@ -219,7 +240,7 @@ class _HomePageState extends State<HomePage> {
           padding: EdgeInsets.all(24),
           decoration: BoxDecoration(
             image: DecorationImage(
-              image: AssetImage("assets/images/background_large.png"),
+              image: imageLarge,
               fit: BoxFit.cover,
             ),
           ),
