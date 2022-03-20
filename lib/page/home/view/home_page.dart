@@ -41,8 +41,8 @@ class _HomePageState extends State<HomePage> {
   void onSearch(){
     if(_editingController.text != "") {
       BlocProvider.of<SnaptifyBloc>(context).add(
-        GetSnaptifyByKeyword(
-          keyword: _editingController.text,
+        GetSnaptifyByImageUrl(
+          url: _editingController.text,
         )
       );
 
