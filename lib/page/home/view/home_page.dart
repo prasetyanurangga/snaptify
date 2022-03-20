@@ -76,7 +76,7 @@ class _HomePageState extends State<HomePage> {
                   ),
                   SizedBox(height: 16),
                   Text(
-                    "Sort your Spotify music by any image you like ",
+                    "Sort your Spotify music by any image you like",
                     textAlign: TextAlign.center,
                     style: Theme.of(context).textTheme.bodyText1?.copyWith(
                       fontSize: 16.0, 
@@ -168,7 +168,7 @@ class _HomePageState extends State<HomePage> {
                   SizedBox(
                     width: 400,
                     child: Text(
-                      "Sort your Spotify music by any mood you like and save them as playlists. ",
+                      "Sort your Spotify music by any image you like",
                       textAlign: TextAlign.center,
                       style: Theme.of(context).textTheme.bodyText1?.copyWith(
                         fontSize: 16.0, 
@@ -262,7 +262,7 @@ class _HomePageState extends State<HomePage> {
                   SizedBox(
                     width: 400,
                     child: Text(
-                      "Sort your Spotify music by any mood you like and save them as playlists. ",
+                      "Sort your Spotify music by any image you like",
                       textAlign: TextAlign.center,
                       style: Theme.of(context).textTheme.bodyText1?.copyWith(
                         fontSize: 16.0, 
