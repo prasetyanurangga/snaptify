@@ -9,8 +9,11 @@ import 'package:snaptify/router/router_generator.dart';
 import 'package:snaptify/page/not_found/not_found.dart';
 import 'package:qlevar_router/qlevar_router.dart';
 
+ 
+
 
 void main() {
+  QR.setUrlStrategy();
   runApp(const MyApp());
 }
 
@@ -56,4 +59,3 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-

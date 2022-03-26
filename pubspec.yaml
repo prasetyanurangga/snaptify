@@ -42,9 +42,14 @@ dependencies:
   dio: ^4.0.4
   equatable: ^2.0.3
   url_launcher: ^6.0.18
+  uni_links: ^0.5.1
   qlevar_router: ^1.5.10
   shimmer: ^2.0.0
   cached_network_image: ^3.2.0
+  spotify: ^0.7.0
+  flutter_web_auth: ^0.4.1
+  url_strategy: ^0.2.0
+  shared_preferences: ^2.0.13
 
 dev_dependencies:
   flutter_test:
