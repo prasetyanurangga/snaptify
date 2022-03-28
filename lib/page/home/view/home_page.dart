@@ -53,7 +53,7 @@ class _HomePageState extends State<HomePage> {
         'https://accounts.spotify.com/api/token',
         data: {
           "code": itemName,
-          "redirect_uri": "http://localhost:1234/snaptify/callback.html",
+          "redirect_uri": "https://prasetyanurangga.github.io/snaptify/callback.html",
           "grant_type": "authorization_code",
           "code_verifier" : "TjDRHMNr74-x~O2~n-sf6QB0Ij8RZPGL5H2~I9V__meEyr5TQyYP1QbnBGHgM7pXt~XkPZf3UzNor~IK2LsOY1y7Ya6zgGl_E5KRrR_8rk7I7D.eRAE0vNxd7VVekO02"
         }
@@ -85,7 +85,7 @@ class _HomePageState extends State<HomePage> {
   void onLogin() async {
     final credentials = SpotifyApiCredentials("2d2e6dd4b5b74d16878d8716044bb72c", "5b6e552293ad4ad88a1fdd0ccd82b134");
     final grant = SpotifyApi.authorizationCodeGrant(credentials);
-    final redirectUri = 'http://localhost:1234/snaptify/callback.html';
+    final redirectUri = 'https://prasetyanurangga.github.io/snaptify/callback.html';
     final scopes = ['playlist-modify-public', 'playlist-modify-private'];
 
     final authUri = grant.getAuthorizationUrl(
