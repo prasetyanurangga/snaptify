@@ -130,6 +130,26 @@ class _ResultPageState extends State<ResultPage> {
           ),
         ],
       )));
+     } else if(data.length == 0){
+      QR.show(QDialog(widget: (pop) => AlertDialog(
+        title: Text('Track Empty'),
+        actions: [
+          TextButton(
+            child: Text(
+              'Okay',
+              style: Theme.of(context).textTheme.bodyText1?.copyWith(
+                  fontSize: 16.0, 
+                  fontWeight: FontWeight.w400,
+                  color: Colors.black
+              ),
+            ),
+            onPressed: () {
+              
+              QR.back();
+            },
+          ),
+        ],
+      )));
      } else {
       QR.show(QDialog(widget: (pop) => AlertDialog(
         title: Text('Please login to be able to save track'),
