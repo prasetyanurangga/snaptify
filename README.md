@@ -1,4 +1,4 @@
-# snaptify
+# Snaptify
 
 A new Flutter project.
 
