@@ -8,12 +8,13 @@ import 'package:qlevar_router/qlevar_router.dart';
 import 'dart:html' as html;
 import 'package:uni_links/uni_links.dart';
 import 'dart:async';
-import 'dart:io';
+import 'dart:io' show Platform;
 import 'dart:convert';
 import 'package:spotify/spotify.dart';
 import 'package:flutter_web_auth/flutter_web_auth.dart';
 import 'package:dio/dio.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -29,10 +30,12 @@ class _HomePageState extends State<HomePage> {
   late AssetImage imageMedium;
   late AssetImage imageLarge;
   String displayName = "";
+  String token;
 
   @override
   void initState() {
     super.initState();
+     token = Platform.environment['TOKEN'] ?? "";
     _editingController = TextEditingController();
     imageSmall = AssetImage("assets/images/background_small.png");
     imageMedium = AssetImage("assets/images/background_medium.png");
@@ -130,7 +133,7 @@ class _HomePageState extends State<HomePage> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text(
-                    "Snaptify",
+                    "Snaptify ${token}",
                     style: Theme.of(context).textTheme.headline2?.copyWith(
                       fontSize: 56.0, 
                       fontWeight: FontWeight.w900,
