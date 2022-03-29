@@ -30,8 +30,6 @@ class _HomePageState extends State<HomePage> {
   late AssetImage imageMedium;
   late AssetImage imageLarge;
   String displayName = "";
-  final token = const String.fromEnvironment('TOKEN', defaultValue: '');
-
 
   @override
   void initState() {
@@ -133,7 +131,7 @@ class _HomePageState extends State<HomePage> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text(
-                    "Snaptify ${token}",
+                    "Snaptify",
                     style: Theme.of(context).textTheme.headline2?.copyWith(
                       fontSize: 56.0, 
                       fontWeight: FontWeight.w900,
@@ -317,7 +315,7 @@ class _HomePageState extends State<HomePage> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text(
-                    "Snaptify ${token}",
+                    "Snaptify",
                     style: Theme.of(context).textTheme.headline2?.copyWith(
                       fontSize: 56.0, 
                       fontWeight: FontWeight.w900,
