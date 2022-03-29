@@ -36,7 +36,6 @@ class _HomePageState extends State<HomePage> {
   @override
   void initState() {
     super.initState();
-     token = Platform.environment['TOKEN'] ?? "";
     _editingController = TextEditingController();
     imageSmall = AssetImage("assets/images/background_small.png");
     imageMedium = AssetImage("assets/images/background_medium.png");

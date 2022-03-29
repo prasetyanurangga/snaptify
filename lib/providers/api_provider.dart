@@ -2,7 +2,6 @@ import 'package:dio/dio.dart';
 import 'dart:async';
 import 'package:snaptify/constant/strings.dart';
 import 'dart:convert';
-import 'dart:io' show Platform;
 
 
 class ApiProvider{
