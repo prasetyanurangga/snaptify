@@ -8,10 +8,12 @@ class ApiProvider{
 
 
   Dio getDio(){
+    String? token = Platform.environment['TOKEN'] ?? "";
     var options = BaseOptions(
       baseUrl: Strings.base_url,
       headers : {
         'Content-Type' : 'application/json',
+        'Token' : token,
       }
     );
 
