@@ -30,7 +30,7 @@ class _HomePageState extends State<HomePage> {
   late AssetImage imageMedium;
   late AssetImage imageLarge;
   String displayName = "";
-  String token;
+  String token = "";
 
   @override
   void initState() {
