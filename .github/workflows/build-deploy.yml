@@ -25,9 +25,7 @@ jobs:
   
     
     - name: Build release project
-      run: flutter build web --release
-      env:
-        TOKEN: ${{ secrets.TOKEN }}
+      run: flutter build web --release --dart-define=TOKEN=${{ secrets.TOKEN }}
 
     - name: Upload production-ready build files
       uses: actions/upload-artifact@v2
