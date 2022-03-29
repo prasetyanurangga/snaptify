@@ -65883,7 +65883,7 @@ A.aei.prototype={
 $2(a,b){var s,r,q,p,o,n,m,l,k,j=null,i=this.a,h=A.lj(B.aQ,A.a(i.e,"imageSmall")),g=i.c
 g.toString
 g=A.aj(g).P.b
-g=A.bd("Snaptify anggaganteng",j,j,j,g==null?j:g.c2(B.j,56,B.ba),j,j)
+g=A.bd("Snaptify",j,j,j,g==null?j:g.c2(B.j,56,B.ba),j,j)
 s=A.ds(j,16,j)
 r=i.c
 r.toString
@@ -65939,7 +65939,7 @@ A.aeg.prototype={
 $2(a,b){var s,r,q,p,o,n,m,l,k,j=null,i=this.a,h=A.lj(B.aQ,A.a(i.r,"imageLarge")),g=i.c
 g.toString
 g=A.aj(g).P.b
-g=A.bd("Snaptify anggaganteng",j,j,j,g==null?j:g.c2(B.j,56,B.ba),j,j)
+g=A.bd("Snaptify",j,j,j,g==null?j:g.c2(B.j,56,B.ba),j,j)
 s=A.ds(j,16,j)
 r=i.c
 r.toString
