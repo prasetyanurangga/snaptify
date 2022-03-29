@@ -33,5 +33,6 @@ For more information contact angganurprasetya4@gmail.com
 [Snaptify Api](https://github.com/prasetyanurangga/snaptify_api/)
 
 ### Snpatify Final UI
-![App UI](https://github.com/prasetyanurangga/snaptify/raw/main/snaptify_ui.png)
+![Landing UI](https://github.com/prasetyanurangga/snaptify/raw/main/snaptify_ui_landing.png)
+![Result UI](https://github.com/prasetyanurangga/snaptify/raw/main/snaptify_ui_result.png)
 
