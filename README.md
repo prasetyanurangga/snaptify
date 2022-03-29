@@ -3,7 +3,6 @@
 Snaptify
 
 **Packages we are using:**
-
 - [Flutter Svg](https://pub.dev/packages/flutter_svg)
 - [Flutter Bloc](https://pub.dev/packages/flutter_bloc)
 - [Google Fonts](https://pub.dev/packages/google_fonts)
@@ -17,20 +16,16 @@ Snaptify
 
     
 **Fonts**
-
 -  [Poppins](https://fonts.google.com/specimen/Poppins)
 
 
 **Contact**
-
 For more information contact angganurprasetya4@gmail.com
 
 **Live Demo**
-
 [Snaptify](https://prasetyanurangga.github.io/snaptify)
 
 **Data**
-
 [Snaptify Api](https://github.com/prasetyanurangga/snaptify_api/)
 
 ### Snpatify Final UI
