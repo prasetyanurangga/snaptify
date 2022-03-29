@@ -8,12 +8,13 @@ import 'package:qlevar_router/qlevar_router.dart';
 import 'dart:html' as html;
 import 'package:uni_links/uni_links.dart';
 import 'dart:async';
-import 'dart:io';
+import 'dart:io' show Platform;
 import 'dart:convert';
 import 'package:spotify/spotify.dart';
 import 'package:flutter_web_auth/flutter_web_auth.dart';
 import 'package:dio/dio.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -31,9 +32,11 @@ class _HomePageState extends State<HomePage> {
   String displayName = "";
   final token = const String.fromEnvironment('TOKEN', defaultValue: '');
 
+
   @override
   void initState() {
     super.initState();
+     token = Platform.environment['TOKEN'] ?? "";
     _editingController = TextEditingController();
     imageSmall = AssetImage("assets/images/background_small.png");
     imageMedium = AssetImage("assets/images/background_medium.png");
