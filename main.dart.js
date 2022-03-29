@@ -65883,7 +65883,7 @@ A.aei.prototype={
 $2(a,b){var s,r,q,p,o,n,m,l,k,j=null,i=this.a,h=A.lj(B.aQ,A.a(i.e,"imageSmall")),g=i.c
 g.toString
 g=A.aj(g).P.b
-g=A.bd("Snaptify angga",j,j,j,g==null?j:g.c2(B.j,56,B.ba),j,j)
+g=A.bd("Snaptify anggaganteng",j,j,j,g==null?j:g.c2(B.j,56,B.ba),j,j)
 s=A.ds(j,16,j)
 r=i.c
 r.toString
@@ -65939,7 +65939,7 @@ A.aeg.prototype={
 $2(a,b){var s,r,q,p,o,n,m,l,k,j=null,i=this.a,h=A.lj(B.aQ,A.a(i.r,"imageLarge")),g=i.c
 g.toString
 g=A.aj(g).P.b
-g=A.bd("Snaptify angga",j,j,j,g==null?j:g.c2(B.j,56,B.ba),j,j)
+g=A.bd("Snaptify anggaganteng",j,j,j,g==null?j:g.c2(B.j,56,B.ba),j,j)
 s=A.ds(j,16,j)
 r=i.c
 r.toString
@@ -66028,7 +66028,7 @@ r=A.aj(r).P.z
 return A.cf(s,A.eC(A.fp(A.b([p,A.bd("Not Found",s,s,s,r==null?s:r.c2(B.j,24,B.o),s,s)],t.p),B.a8,B.aL,B.a2),s,s),s,s,new A.e3(s,q,s,s,s,s,B.ab),s,s,new A.aD(24,24,24,24),s)},
 $S:23}
 A.lb.prototype={
-F4(){return A.aqR(A.aqk("https://snaptify-api.herokuapp.com",A.aH(["Content-Type","application/json","Token","angga"],t.N,t.z)))},
+F4(){return A.aqR(A.aqk("https://snaptify-api.herokuapp.com",A.aH(["Content-Type","application/json","Token","anggaganteng"],t.N,t.z)))},
 j0(a){return this.Rb(a)},
 Rb(a){var s=0,r=A.F(t.k8),q,p=2,o,n=[],m=this,l,k,j,i,h,g
 var $async$j0=A.A(function(b,c){if(b===1){o=c
